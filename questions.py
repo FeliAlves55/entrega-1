@@ -1,22 +1,30 @@
 import random
 import string 
 rango = string.ascii_letters
-words = [
-"python",
-"programa",
-"variable",
-"funcion",
-"bucle",
-"cadena",
-"entero",
-"lista",
-]
-word = random.choice(words)
+categories = {
+"Programacion": ["python","programa","variable","funcion","bucle"],
+"Valores": ["cadena","entero","lista",]
+}
+#Mostrar Caegorias
+for elem in categories:
+    print("|",elem)
+category_ch = input("Escribe el nombre de la categoria a jugar: ")
+
+#Fijarse que este dentro de las categorias
+while category_ch not in categories:
+    category_ch = input("La categoria es incorrecta eliga de nuevo: ")
+
+#Seleccion de palabra al azar
+category_play = categories[category_ch]
+word = random.choice(category_play)
+
 guessed = []
 attempts = 6
 puntaje = 0
 print("¡Bienvenido al Ahorcado!")
 print()
+#Mostrar categorias
+
 while attempts > 0:
     # Mostrar progreso: letras adivinadas y guiones para las que faltan
     progress = ""
@@ -51,4 +59,4 @@ while attempts > 0:
 else:
  print(f"¡Perdiste! La palabra era: {word}")
  puntaje = 0
-print(puntaje)
+print(f"Tu puntaje es de: {puntaje}")
