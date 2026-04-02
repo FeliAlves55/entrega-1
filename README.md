@@ -13,8 +13,11 @@ Descargar python en su pagina original: https://www.python.org/ (Verificar la ve
 Segundo paso
 Descargar el jupyter, pegando este comando en la consola:
 
-  pip install notebook
+pip install notebook
+
+  
 Ejecución del Programa
+
 1- Estos archivos estan dentro de una carpeta en el repositorio remoto (src/notebooks)
 
 2- Una vez descargado el programa, abrir el archivo con VSC (Visual Studio Core, u otro IDE)
